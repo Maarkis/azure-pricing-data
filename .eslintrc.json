@@ -1,0 +1,56 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "dist"
+  ],
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "semi": [
+          "error",
+          "always"
+        ],
+
+        // "no-console": [
+        //   "error",
+        //   {
+        //     "allow": [
+        //       "warn",
+        //       "error"
+        //     ]
+        //   }
+        // ],
+        "no-empty": "error",
+        "no-unsafe-negation": [
+          "error",
+          {
+            "enforceForOrderingRelations": true
+          }
+        ],
+        "no-var": "error",
+        "no-debugger": "error",
+        "no-duplicate-imports": "error",
+        "no-nested-ternary": "error",
+        "no-throw-literal": "error",
+        "no-useless-constructor": "error",
+        "arrow-spacing": "error"
+      }
+    }
+  ]
+}
